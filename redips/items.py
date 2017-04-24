@@ -11,4 +11,10 @@ import scrapy
 class RedipsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    pass
+    name = scrapy.Field()
+    shop = scrapy.Field()
+    price = scrapy.Field()
+    trading = scrapy.Field()
+    review = scrapy.Field()
+    url = scrapy.Field()
+    score = scrapy.Field()
