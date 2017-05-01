@@ -17,6 +17,8 @@ NEWSPIDER_MODULE = 'redips.spiders'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 USER_AGENT = 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2272.89 Safari/537.36'
+FEED_URI = u'JDSpiderDoc.csv'
+FEED_FORMAT = 'CSV'
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = False
