@@ -1,0 +1,14 @@
+setup.py
+JDSearch/__init__.py
+JDSearch/items.py
+JDSearch/middlewares.py
+JDSearch/pipelines.py
+JDSearch/settings.py
+JDSearch/spiders/__init__.py
+JDSearch/spiders/jdSProduct.py
+JDSearch/spiders/jdSSpider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

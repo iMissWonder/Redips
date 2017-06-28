@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>REDIPS-SPIDER</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+
+    <link rel="icon" type="image/ico" href="http://tattek.com/minimal/assets/images/favicon.ico" />
+    <!-- Bootstrap -->
+    <link href="assets/css/vendor/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/vendor/animate/animate.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="assets/js/vendor/mmenu/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="assets/js/vendor/videobackground/css/jquery.videobackground.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap-checkbox.css">
+
+    <link rel="stylesheet" href="assets/js/vendor/rickshaw/css/rickshaw.min.css">
+    <link rel="stylesheet" href="assets/js/vendor/morris/css/morris.css">
+    <link rel="stylesheet" href="assets/js/vendor/tabdrop/css/tabdrop.css">
+    <link rel="stylesheet" href="assets/js/vendor/summernote/css/summernote.css">
+    <link rel="stylesheet" href="assets/js/vendor/summernote/css/summernote-bs3.css">
+    <link rel="stylesheet" href="assets/js/vendor/chosen/css/chosen.min.css">
+    <link rel="stylesheet" href="assets/js/vendor/chosen/css/chosen-bootstrap.css">
+
+    <link href="assets/css/minimal.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="bg-1">
+
+ 
+
+    <!-- Preloader -->
+    <div class="mask"><div id="loader"></div></div>
+    <!--/Preloader -->
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      
+
+
+      <!-- Make page fluid -->
+      <div class="row">
+        
+
+
+
+
+        <!-- Fixed navbar -->
+        <div class="navbar navbar-default navbar-fixed-top navbar-transparent-black mm-fixed-top" role="navigation" id="navbar">
+          
+
+
+          <!-- Branding -->
+          <div class="navbar-header col-md-2">
+            <a class="navbar-brand" href="index.html">
+              <strong>RED</strong>IPS
+            </a>
+            <div class="sidebar-collapse">
+              <a href="#">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Branding end -->
+
+
+          <!-- .nav-collapse -->
+          <div class="navbar-collapse">
+                        
+            <!-- Page refresh -->
+            <ul class="nav navbar-nav refresh">
+              <li class="divided">
+                <a href="#" class="page-refresh"><i class="fa fa-refresh"></i></a>
+              </li>
+            </ul>
+            <!-- /Page refresh -->
+
+            <!-- Search -->
+           
+            <!-- Search end -->
+
+            <!-- Quick Actions -->
+            <ul class="nav navbar-nav quick-actions">
+              
+              <li class="dropdown divided">
+                
+                <a class="dropdown-toggle button" data-toggle="dropdown" href="#">
+                  <i class="fa fa-user"></i>
+                  <span class="label label-transparent-black">></span>
+                </a>
+
+                <ul class="dropdown-menu wide arrow nopadding bordered">
+                  <li><h1>OurTeam： <strong>REDIPS</strong></h1></li>
+
+                </ul>
+
+              </li>
+
+              <li class="dropdown divided">
+                
+                <a class="dropdown-toggle button" data-toggle="dropdown" href="#">
+                  <i class="fa fa-envelope"></i>
+                  <span class="label label-transparent-black">></span>
+                </a>
+
+                <ul class="dropdown-menu wider arrow nopadding messages">
+                  <li><h1>E-mail： <strong>REDIPS</strong></h1></li>
+            
+                </ul>
+
+              </li>
+
+              <li class="dropdown divided">
+                
+                <a class="dropdown-toggle button" data-toggle="dropdown" href="#">
+                  <i class="fa fa-cloud"></i>
+                  <span class="label label-transparent-black">></span>
+                </a>
+
+                <ul class="dropdown-menu wide arrow nopadding bordered">
+                  <li><h1>技术博客 <strong>www.iMissWonder.com</strong></h1></li>
+                </ul>
+
+              </li>
+
+              <li class="dropdown divided user" id="current-user">
+                <div class="profile-photo">
+                  <img src="assets/images/profile-photo.jpg" alt />
+                </div>
+                <a class="dropdown-toggle options" data-toggle="dropdown" href="#">
+                  皮肤 <i class="fa fa-caret-down"></i>
+                </a>
+                
+                <ul class="dropdown-menu arrow settings">
+
+                  <li>
+                    
+                    <h3>Backgrounds:</h3>
+                    <ul id="color-schemes">
+                      <li><a href="#" class="bg-1"></a></li>
+                      <li><a href="#" class="bg-2"></a></li>
+                      <li><a href="#" class="bg-3"></a></li>
+                      <li><a href="#" class="bg-4"></a></li>
+                      <li><a href="#" class="bg-5"></a></li>
+                      <li><a href="#" class="bg-6"></a></li>
+                    </ul>
+
+                  
+					</li>
+                 
+                </ul>
+              
+
+
+            </ul>
+            <!-- /Quick Actions -->
+
+
+
+            <!-- Sidebar -->
+            <ul class="nav navbar-nav side-nav" id="sidebar">
+              
+              <li class="collapsed-content"> 
+                <ul>
+                  <li class="search"><!-- Collapsed search pasting here at 768px --></li>
+                </ul>
+              </li>
+
+              <li class="navigation" id="navigation">
+                <a href="#" class="sidebar-toggle" data-toggle="#navigation">Navigation <i class="fa fa-angle-up"></i></a>
+                
+                <ul class="menu">
+                  
+                  <li class="active">
+                    <a href="index.html">
+                      <i class="fa fa-home"></i> Index
+                      
+                    </a>
+                  </li>
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-cny"></i> 京东 <b class="fa fa-plus dropdown-plus"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="jdmodel.html">
+                          <i class="fa fa-caret-right"></i> 模板爬取
+                        </a>
+                      </li>
+                      <li>
+                        <a href="jdsearch.html">
+                          <i class="fa fa-caret-right"></i> 搜索爬取
+                        </a>
+                      </li>
+                     </ul>
+                  </li>
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-shopping-cart"></i> 淘宝 <b class="fa fa-plus dropdown-plus"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="tball.html">
+                          <i class="fa fa-caret-right"></i> 全网爬取
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tbsearch.html">
+                          <i class="fa fa-caret-right"></i> 搜索爬取
+                        </a>
+                      </li>
+                      
+                    </ul>
+                 
+                   </li>
+                   <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-usd"></i> 1号店 <b class="fa fa-plus dropdown-plus"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="1hdall.html">
+                          <i class="fa fa-caret-right"></i> 全网爬取
+                        </a>
+                      </li>
+                      <li>
+                        <a href="1hdsearch.html">
+                          <i class="fa fa-caret-right"></i> 搜索爬取
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="douban.html">
+                      <i class="fa fa-eye"></i> 豆瓣
+                    </a>
+                  </li>
+                  <li>
+                    <a href="boke.html">
+                      <i class="fa fa-pencil"></i> 博客正文抽取
+                    </a>
+                  </li>
+
+                 
+
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <i class="fa fa-table"></i> 爬取结果 <b class="fa fa-plus dropdown-plus"></b>
+                      
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a href="jdmodel_sql.php">
+                          <i class="fa fa-caret-right"></i> JDModel
+                        </a>
+                      </li>
+                      <li>
+                        <a href="jdsearch_sql.php">
+                          <i class="fa fa-caret-right"></i> JDSearch
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tball_sql.php">
+                          <i class="fa fa-caret-right"></i> TBAll
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tbsearch_sql.php">
+                          <i class="fa fa-caret-right"></i> TBSearch
+                        </a>
+                      </li>
+                      <li>
+                        <a href="1hdall_sql.php">
+                          <i class="fa fa-caret-right"></i> 1HDAll
+                        </a>
+                      </li>
+                      <li>
+                        <a href="1hdsearch_sql.php">
+                          <i class="fa fa-caret-right"></i> 1HDSearch
+                        </a>
+                      </li>
+                      <li>
+                        <a href="douban_sql.php">
+                          <i class="fa fa-caret-right"></i> DouBan
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mail.html">
+                          <i class="fa fa-caret-right"></i> BoKe
+                          
+                        </a>
+                      </li>
+
+                    </ul>
+                  </li>
+
+                  <li>
+                    <a href="widgets.html">
+                      <i class="fa fa-play-circle"></i> 演示视频
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+            
+            </ul>
+            <!-- Sidebar end -->
+
+
+
+
+
+          </div>
+          <!--/.nav-collapse -->
+
+
+
+
+
+        </div>
+        <!-- Fixed navbar end -->
+        
+
+
+
+
+        
+        <!-- Page content -->
+        <div id="content" class="col-md-12">
+          
+
+
+
+
+
+
+
+
+          <!-- page header -->
+          <div class="pageheader">
+            
+
+            <h2><i class="fa fa-home"></i> Index
+            <span>Redips-电商网站</span></h2>
+            
+
+            <div class="breadcrumbs">
+              <ol class="breadcrumb">
+                <li>You are here</li>
+                <li><a href="index.html">MainPage</a></li>
+                <li class="active">Index</li>
+              </ol>
+            </div>
+
+
+          </div>
+          <!-- /page header -->
+          
+          
+
+
+
+
+          <!-- content main container -->
+          <div class="main">
+
+
+
+            <!-- cards -->
+            <div class="row cards">
+              
+              <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+                <div class="card card-red hover">
+                  <div class="front"> 
+
+                    <div class="media">        
+                      <span class="pull-left">
+                        <i class="fa fa-truck media-object"></i>
+                      </span>
+
+                      <div class="media-body">
+                        <small>www.jd.com</small>
+                        <h2 class="media-heading animate-number" data-value="京东" data-animation-duration="1500">0</h2>
+                      </div>
+                    </div> 
+
+                    <div class="progress-list">
+                      <div class="details">
+                        <div class="title">覆盖率%</div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="100" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black">
+                        <div class="progress-bar animate-progress-bar" data-percentage="100%"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="back">
+                    <a href="#">
+                      <i class="fa fa-cloud-download fa-5x"></i>
+                      <span>模板爬取/搜索爬取</span>
+                    </a>  
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+                <div class="card card-orange hover">
+                  <div class="front">        
+                    
+                    <div class="media">                  
+                      <span class="pull-left">
+                        <i class="fa fa-shopping-cart media-object"></i>
+                      </span>
+
+                      <div class="media-body">
+                        <small>www.taobao.com</small>
+                        <h2 class="media-heading animate-number" data-value="淘宝" data-animation-duration="1500">0</h2>
+                      </div>
+                    </div> 
+
+                    <div class="progress-list">
+                      <div class="details">
+                        <div class="title">覆盖率%</div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="100" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black">
+                        <div class="progress-bar animate-progress-bar" data-percentage="100%"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="back">
+                    <a href="#">
+                      <i class="fa fa-cloud-download fa-5x"></i>
+                      <span>全网爬取/搜索爬取</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="card-container col-lg-3 col-sm-6 col-sm-12">
+                <div class="card card-blue hover">
+                  <div class="front">        
+                    
+                    <div class="media">
+                      <span class="pull-left">
+                        <i class="fa fa-suitcase media-object"></i>
+                      </span>
+
+                      <div class="media-body">
+                        <small>www.yhd.com</small>
+                        <h2 class="media-heading animate-number" data-value="1号店" data-animation-duration="1500">0</h2>
+                      </div>
+                    </div>
+
+                    <div class="progress-list">
+                      <div class="details">
+                        <div class="title">覆盖率%</div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="100" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black">
+                        <div class="progress-bar animate-progress-bar" data-percentage="100%"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="back">
+                    <a href="#">
+                      <i class="fa fa-cloud-download fa-5x"></i>
+                      <span>全网爬取/搜索爬取</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="card-container col-lg-3 col-sm-6 col-xs-12">
+                <div class="card card-greensea hover">
+                  <div class="front"> 
+
+                    <div class="media">                   
+                      <span class="pull-left">
+                        <i class="fa fa-eye media-object"></i>
+                      </span>
+
+                      <div class="media-body">
+                        <small>www.douban.com</small>
+                        <h2 class="media-heading animate-number" data-value="豆瓣" data-animation-duration="1500">0</h2>
+                      </div>
+                    </div> 
+
+                    <div class="progress-list">
+                      <div class="details">
+                        <div class="title">覆盖率%</div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="100" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black">
+                        <div class="progress-bar animate-progress-bar" data-percentage="100%"></div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="back">
+                    <a href="#">
+                      <i class="fa fa-cloud-download fa-5x"></i>
+                      <span>搜索爬取</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+
+
+            </div>
+            <!-- /cards -->
+            
+            
+
+
+            <!-- row -->
+            <div class="row">
+
+
+              <!-- col 8 -->
+              <div class="col-lg-8 col-md-12">
+
+
+
+
+                <!-- tile -->
+                <section class="tile transparent">
+
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header color transparent-black textured rounded-top-corners">
+                    <h1><strong>Redips</strong> Intro</h1>
+                    <div class="controls">
+                      
+                      <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <!-- /tile header -->
+
+
+                  <!-- tile widget -->
+                  <div class="tile-widget color transparent-black textured">
+                    <center>
+                    <img src="assets/images/Title.png" style="height: 145px;" alt>
+                    <img src="assets/images/Redips.png" style="height: 245px;" alt>
+                    </center>
+                  </div>
+                  
+                  
+                  <!-- /tile widget -->
+
+
+                 
+
+
+
+                </section>
+                <!-- /tile -->
+
+
+
+                <!-- tile -->
+                <section class="tile color transparent-black">
+
+
+
+
+                   <!-- tile header -->
+                  <div class="tile-header transparent">               
+                    <h1><strong>Redips</strong> Direction</h1>
+                    <div class="controls">
+                      
+                      <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <!-- /tile header -->
+
+
+                  
+                  <!-- tile widget -->
+                  <div class="tile-widget color transparent-black rounded-top-corners nopadding">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs tabdrop">
+                      <li class="active"><a href="#jd-tab" data-toggle="tab">京东</a></li>
+                      <li><a href="#orders-tab" data-toggle="tab">淘宝</a></li>
+                      <li><a href="#messages-tab" data-toggle="tab">1号店</a></li>
+                      <li><a href="#tasks-tab" data-toggle="tab">豆瓣</a></li>
+                      <li><a href="#comments-tab" data-toggle="tab">博客</a></li>
+                    </ul>
+                    <!-- / Nav tabs -->
+                  </div>
+                  <!-- /tile widget -->
+
+
+
+ 		<div class="tile-body tab-content nopadding rounded-bottom-corners">
+                    <!-- Tab panes -->
+                    
+                    
+                    <ul id="jd-tab" class="tab-pane fade in active">
+                      <li>
+                        <img src="assets/images/peter-avatar.jpg" class="w35" alt>【功能及相关操作】
+                      </li>
+                     <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">模板爬取</h3>
+                        </div>
+                        <div class="panel-body" >
+                          
+                            <ul>
+                                <li>使用京东模板的<strong>核心</strong> 是模拟相同结构的电商网站，以实现输入一批具有相同模板的URL集合，可自动提取数据。</li>
+                                <li>程序执行入口位于：<strong>Navigation-京东-模板爬取</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>JDModel</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+ 					<div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">搜索爬取</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                 <li>用户输入要爬取的<strong>商品名称</strong>，爬虫通过目标商品进入搜索页，爬取商品名称、商品URL、价格等信息。</li>
+                                 
+                                <li>程序执行入口位于：<strong>Navigation-京东-搜索爬取</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>JDSearch</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                            </ul>
+                        </div>
+                    </div>
+                     
+                    </ul>
+
+                    <ul id="orders-tab" class="tab-pane fade">
+                      <li>
+                        <img src="assets/images/taobao.JPG" class="w35" alt>【功能及相关操作】
+                      </li>
+                      <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">全网爬取</h3>
+                        </div>
+                        <div class="panel-body" >
+                          
+                            <ul>
+                                <li>爬虫从主页<strong>列表项</strong>获取内容，以此为搜索目录进行全网数据的爬取。</li>
+                                <li>程序执行入口位于：<strong>Navigation-淘宝-全网爬取</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>TBAll</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+ 					<div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">搜索爬取</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                 <li>用户输入要爬取的<strong>商品名称</strong>，爬虫通过目标商品进入搜索页，爬取商品名称、商品URL、价格等信息。</li>
+                                 
+                                <li>程序执行入口位于：<strong>Navigation-淘宝-搜索爬取</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>TBSearch</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </ul>
+
+                    <ul id="messages-tab" class="tab-pane fade">
+                      <li>
+                        <img src="assets/images/1haodian.JPG" class="w35" alt>【功能及相关操作】
+                      </li>
+                       
+                      <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">全网爬取</h3>
+                        </div>
+                        <div class="panel-body" >
+                          
+                            <ul>
+                                <li>爬虫从主页<strong>列表项</strong>获取内容，以此为搜索目录进行全网数据的爬取。</li>
+                                <li>程序执行入口位于：<strong>Navigation-1号店-全网爬取</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>1HDAll</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+ 					<div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">搜索爬取</h3>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                 <li>用户输入要爬取的<strong>商品名称</strong>，爬虫通过目标商品进入搜索页，爬取商品名称、商品URL、价格等信息。</li>
+                                 
+                                <li>程序执行入口位于：<strong>Navigation-1号店-搜索爬取</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>1HDSearch</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    </ul>
+
+                    <ul id="tasks-tab" class="tab-pane fade">
+                      <li>
+                        <img src="assets/images/douban.JPG" class="w35" alt>【功能及相关操作】
+                      </li>
+                       <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">搜索爬取</h3>
+                        </div>
+                        <div class="panel-body" >
+                          
+                            <ul>
+                                <li>用户选择要爬取的<strong>标签</strong>，爬虫通过标签进入搜索页，爬取名称、价格、评价等信息。</li>
+                                <li>程序执行入口位于：<strong>Navigation-豆瓣</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>DouBan</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                     
+ 					
+                    </ul>
+
+                    <ul id="comments-tab" class="tab-pane fade">
+                     <li>
+                        <img src="assets/images/boke.JPG" class="w35" alt>【功能及相关操作】
+                      </li>
+                      <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">正文抽取</h3>
+                        </div>
+                        <div class="panel-body" >
+                          
+                            <ul>
+                                <li>以网易、新浪、腾讯网中的<strong>博客、新闻</strong>为例，可自动提取其中的正文。</li>
+                                <li>程序执行入口位于：<strong>Navigation-博客</strong> </li>
+                                <li>提取的数据将存入数据库的 <strong>BoKe</strong>表中。</li>
+                                <li>请在<strong>【爬取结果】</strong> 中查看对应的爬取内容。</li>
+                              
+                            </ul>
+                        </div>
+                    </div>
+                    </ul>
+
+                    <!-- / Tab panes -->
+                  </div>
+                  <!-- /tile body -->
+
+
+
+                </section>
+                <!-- /tile -->
+
+
+              </div>
+              <!-- /col 8 -->
+
+
+
+              <!-- col 4 -->
+              <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
+                
+
+
+
+                <!-- tile -->
+                <section class="tile color transparent-black textured">
+
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header">
+                    <h1><strong>Redips</strong> Speed</h1>
+                    <div class="controls">
+                      
+                      <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile widget -->
+                  <div class="tile-widget">
+
+                    <div class="progress-list with-heading">
+                      <div class="details">
+                        <div class="title"><h2><i class="fa fa-flash"></i> <span class="animate-number" data-value="987" data-animation-duration="1600">0</span> /min</h2></div>
+                      </div>
+                      <div class="status pull-right bg-transparent-black-1">
+                        <span class="animate-number" data-value="66.02" data-animation-duration="1500">0</span>%
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="progress progress-little progress-transparent-black" style="margin-bottom: 5px">
+                        <div class="progress-bar animate-progress-bar" data-percentage="66.02%"></div>
+                      </div>
+                    </div>  
+                    <p class="description"><strong>Fastest:1495/min</strong>&<strong class="white-text">Average:987/min</strong></p>
+                  </div>
+                  <!-- /tile widget -->
+				<div class="tile-body paddingtop">
+                    <div id="serverload-chart"></div>
+                  </div>
+
+                  <!-- tile body -->
+                  
+                  
+                  <!-- /tile body -->
+                
+
+
+                </section>
+                <!-- /tile -->
+
+
+                <!-- tile -->
+                <section class="tile color transparent-black">
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header">
+                    <h1><strong>Redips</strong> Data</h1>
+                    <div class="controls">
+                      
+                      <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile body -->
+                  <div class="tile-body">
+                    
+                    <div id="browser-usage" style="height: 230px;" class="morris-chart"><center> </center></div>
+                    
+                    <ul class="inline text-center chart-legend">
+                      
+                      <li><span class="badge badge-outline" style="border-color: #d9544f"></span> 1号店 <small>45.86%</small>,</li>
+                      <li><span class="badge badge-outline" style="border-color: #2fbbe8"></span> 淘宝 <small>14.63%</small>,</li>
+                      <li><span class="badge badge-outline" style="border-color: #72cae7"></span> 京东 <small>15.60%</small>,</li>
+                      <li><span class="badge badge-outline" style="border-color: #ffc100"></span> 豆瓣 <small>23.89%</small>,</li>
+                      <li><span class="badge badge-outline" style="border-color: #1693A5"></span> 博客 <small>0.02%</small></li>
+                    </ul>
+                  </div>
+                  <!-- /tile body --> 
+
+
+
+
+                </section>
+                <!-- /tile -->
+
+
+
+                <!-- tile -->
+                <section class="tile transparent">
+
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header color redbrown rounded-top-corners text-center">               
+                    <button class="btn pull-left btn-black-transparent" type="button"><i class="fa fa-caret-square-o-down"></i></button>
+                    <h2><strong>Redips</strong> List</h2>
+                    <div class="controls">
+                     
+                      <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile body -->
+                  <div class="tile-body color transparent-black rounded-bottom-corners">
+                   
+                    <ul class="nolisttypes" id="todolist">
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-01">
+                          <label for="todo-01">京东 【模板爬取】</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-02">
+                          <label for="todo-02">京东 【搜索爬取】</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-03">
+                          <label for="todo-03">淘宝 【全网爬取】</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-04">
+                          <label for="todo-04">淘宝 【搜索爬取】</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-05">
+                          <label for="todo-05">1号店 【全网爬取】</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-06">
+                          <label for="todo-06">1号店 【搜索爬取】</label>
+                        </div>
+                      </li>
+                     
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-08">
+                          <label for="todo-08">豆瓣 【搜索爬取】</label>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="checkbox check-transparent">
+                          <input type="checkbox" value="1" id="todo-09">
+                          <label for="todo-09">博客 【正文抽取】</label>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- /tile body -->
+                
+
+
+                </section>
+                <!-- /tile -->
+
+
+              </div>
+              <!-- /col 4 -->
+              
+              
+            </div>
+            <!-- /row -->
+
+
+            <!-- row -->
+            <div class="row">
+
+
+
+
+              <!-- col 6 -->
+              <div class="col-md-6">
+
+                
+                <!-- tile -->
+                <section class="tile transparent recent-activity">
+
+
+
+
+                
+                
+
+
+                </section>
+                <!-- /tile -->
+
+               
+                <!-- /tile -->
+
+              
+
+
+              </div>
+              <!-- /col 6 -->
+              
+
+
+
+            </div>
+            <!-- /row -->  
+
+
+
+          </div>
+          <!-- /content container -->
+
+
+
+
+
+
+        </div>
+        <!-- Page content end -->
+
+
+
+
+
+
+      </div>
+      <!-- Make page fluid-->
+
+
+
+
+    </div>
+    <!-- Wrap all page content end -->
+
+
+
+    <section class="videocontent" id="video"></section>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="assets/js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/mmenu/js/jquery.mmenu.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/nicescroll/jquery.nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/animate-numbers/jquery.animateNumbers.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/videobackground/jquery.videobackground.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/blockui/jquery.blockUI.js"></script>
+
+    <script src="assets/js/vendor/flot/jquery.flot.min.js"></script>
+    <script src="assets/js/vendor/flot/jquery.flot.time.min.js"></script>
+    <script src="assets/js/vendor/flot/jquery.flot.selection.min.js"></script>
+    <script src="assets/js/vendor/flot/jquery.flot.animator.min.js"></script>
+    <script src="assets/js/vendor/flot/jquery.flot.orderBars.js"></script>
+    <script src="assets/js/vendor/easypiechart/jquery.easypiechart.min.js"></script>
+
+    <script src="assets/js/vendor/rickshaw/raphael-min.js"></script> 
+    <script src="assets/js/vendor/rickshaw/d3.v2.js"></script>
+    <script src="assets/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+    <script src="assets/js/vendor/morris/morris.min.js"></script>
+
+    <script src="assets/js/vendor/tabdrop/bootstrap-tabdrop.min.js"></script>
+
+    <script src="assets/js/vendor/summernote/summernote.min.js"></script>
+
+    <script src="assets/js/vendor/chosen/chosen.jquery.min.js"></script>
+
+    <script src="assets/js/minimal.min.js"></script>
+
+    <script>
+    $(function(){
+
+      // Initialize card flip
+      $('.card.hover').hover(function(){
+        $(this).addClass('flip');
+      },function(){
+        $(this).removeClass('flip');
+      });
+
+    
+        
+	 						
+
+      
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+          //server load rickshaw chart
+      var graph;
+
+      var seriesData = [ [], []];
+      var random = new Rickshaw.Fixtures.RandomData(50);
+
+      for (var i = 0; i < 50; i++) {
+        random.addData(seriesData);
+      }
+
+      graph = new Rickshaw.Graph( {
+        element: document.querySelector("#serverload-chart"),
+        height: 150,
+        renderer: 'area',
+        series: [
+          {
+            data: seriesData[0],
+            color: '#6e6e6e',
+            name:'File Server'
+          },{
+            data: seriesData[1],
+            color: '#fff',
+            name:'Mail Server'
+          }
+        ]
+      } );
+
+      var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+        graph: graph,
+      });
+
+      setInterval( function() {
+        random.removeData(seriesData);
+        random.addData(seriesData);
+        graph.update();
+
+      },1000);
+
+
+
+      // Morris donut chart
+      Morris.Donut({
+        element: 'browser-usage',
+        data: [
+          {label: "淘宝", value: 1286000},
+          {label: "京东", value: 1371600},
+          {label: "博客", value: 1577},
+          {label: "豆瓣", value: 2100000},
+          {label: "1号店", value: 4032000},
+        ],
+        colors: [ '#2fbbe8', '#72cae7', '#1693A5', '#ffc100', '#d9544f']
+      });
+
+      $('#browser-usage').find("path[stroke='#ffffff']").attr('stroke', 'rgba(0,0,0,0)');
+
+      //sparkline charts
+      $('#projectbar1').sparkline('html', {type: 'bar', barColor: '#22beef', barWidth: 4, height: 20});
+      $('#projectbar2').sparkline('html', {type: 'bar', barColor: '#cd97eb', barWidth: 4, height: 20});
+      $('#projectbar3').sparkline('html', {type: 'bar', barColor: '#a2d200', barWidth: 4, height: 20});
+      $('#projectbar4').sparkline('html', {type: 'bar', barColor: '#ffc100', barWidth: 4, height: 20});
+      $('#projectbar5').sparkline('html', {type: 'bar', barColor: '#ff4a43', barWidth: 4, height: 20});
+      $('#projectbar6').sparkline('html', {type: 'bar', barColor: '#a2d200', barWidth: 4, height: 20});
+
+      // sortable table
+      $('.table.table-sortable th.sortable').click(function() {
+        var o = $(this).hasClass('sort-asc') ? 'sort-desc' : 'sort-asc';
+        $('th.sortable').removeClass('sort-asc').removeClass('sort-desc');
+        $(this).addClass(o);
+      });
+
+      //todo's
+      $('#todolist li label').click(function() {
+        $(this).toggleClass('done');
+      });
+
+      // Initialize tabDrop
+      $('.tabdrop').tabdrop({text: '<i class="fa fa-th-list"></i>'});
+
+      //load wysiwyg editor
+      $('#quick-message-content').summernote({
+        toolbar: [
+          //['style', ['style']], // no style button
+          ['style', ['bold', 'italic', 'underline', 'clear']],
+          ['fontsize', ['fontsize']],
+          ['color', ['color']],
+          ['para', ['ul', 'ol', 'paragraph']],
+          ['height', ['height']],
+          //['insert', ['picture', 'link']], // no insert buttons
+          //['table', ['table']], // no table button
+          //['help', ['help']] //no help button
+        ],
+        height: 143   //set editable area's height
+      });
+
+      //multiselect input
+      $(".chosen-select").chosen({disable_search_threshold: 10});
+      
+    })
+      
+    </script>
+  </body>
+</html>
+      

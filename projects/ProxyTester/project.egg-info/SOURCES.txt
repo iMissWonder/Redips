@@ -1,0 +1,13 @@
+setup.py
+ProxyTester/__init__.py
+ProxyTester/items.py
+ProxyTester/middlewares.py
+ProxyTester/pipelines.py
+ProxyTester/settings.py
+ProxyTester/spiders/ProxyTestSpider.py
+ProxyTester/spiders/__init__.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+taobaoCrawler/__init__.py
+taobaoCrawler/items.py
+taobaoCrawler/middlewares.py
+taobaoCrawler/pipelines.py
+taobaoCrawler/settings.py
+taobaoCrawler/spiders/__init__.py
+taobaoCrawler/spiders/taobaoProSpider.py
+taobaoCrawler/spiders/taobaoSpider.py

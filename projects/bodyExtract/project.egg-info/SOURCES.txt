@@ -1,0 +1,14 @@
+setup.py
+bodyExtract/__init__.py
+bodyExtract/items.py
+bodyExtract/middlewares.py
+bodyExtract/pipelines.py
+bodyExtract/settings.py
+bodyExtract/spiders/__init__.py
+bodyExtract/spiders/bodyExtractInSpider.py
+bodyExtract/spiders/bodyExtractSpider.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
