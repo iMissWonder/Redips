@@ -1,4 +1,4 @@
-cd ./projects/bodyExtract/
+cd ./mnt/projects/bodyExtract/
 scrapyd-deploy default -p bodyExtract
 
 cd ../DoubanBookSpider/
