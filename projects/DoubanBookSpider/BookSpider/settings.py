@@ -93,7 +93,7 @@ USER_AGENT ="Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.1 (KHTML, like 
 DOWNLOADER_MIDDLEWARES = {
     'scrapy.contrib.downloadermiddleware.useragent.UserAgentMiddleware' : None,
     'BookSpider.middlewares.RandomUserAgent': 100,
-    #'BookSpider.middlewares.ProxyMiddleware': 200,
+    'BookSpider.middlewares.ProxyMiddleware': 200,
     'scrapy.contrib.downloadermiddleware.retry.RetryMiddleware': 300,
     'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 400,
 }

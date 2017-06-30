@@ -11,7 +11,6 @@ import random
 import redis
 
 # Start your middleware class
-'''
 class ProxyMiddleware(object):
     # overwrite process request
     def process_request(self, request, spider):
@@ -42,7 +41,6 @@ class ProxyMiddleware(object):
             return current_proxy
         except Exception, e:
             return ''
-'''
 
 
 class RandomUserAgent(object):
