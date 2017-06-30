@@ -18,12 +18,6 @@ NEWSPIDER_MODULE = 'BookSpider.spiders'
 #USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
 #HTTPERROR_ALLOWED_CODES = [403]
 
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-SCHEDULER_ORDER = 'BFO'
-SCHEDULER_PERSIST = True
-SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
-
 REDIS_URL = None
 REDIS_HOST = '192.168.199.218'
 REDIS_PORT = 6379
