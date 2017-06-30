@@ -11,6 +11,7 @@ import random
 import redis
 
 # Start your middleware class
+'''
 class ProxyMiddleware(object):
     # overwrite process request
     def process_request(self, request, spider):
@@ -19,7 +20,8 @@ class ProxyMiddleware(object):
 
         retry_times = request.meta.get('retry_times', 0)
         if (retry_times != 0) and (retry_times % 3 == 0):
-            current_proxy = self.change_proxy(request)
+            current_proxy = self.change_proxy(request):w
+
         print "Current proxy: " + str(current_proxy) + " Retry times: %d" % retry_times
 
         # Use the following lines if your proxy requires authentication
@@ -40,6 +42,7 @@ class ProxyMiddleware(object):
             return current_proxy
         except Exception, e:
             return ''
+'''
 
 
 class RandomUserAgent(object):
