@@ -14,9 +14,10 @@ BOT_NAME = 'ProxyCrawler'
 SPIDER_MODULES = ['ProxyCrawler.spiders']
 NEWSPIDER_MODULE = 'ProxyCrawler.spiders'
 
-REDIS_HOST = '192.168.199.218'
+REDIS_HOST = 'db2.daocloudinternal.io'
 
-REDIS_PORT = 6379
+REDIS_PORT = 60222
+REDIS_PASSWORD = 'KZ80pnCx'
 
 USER_AGENT = 'Mozilla/5.0'
 

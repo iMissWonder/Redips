@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from scrapy_redis import get_redis
+import redis
 import subprocess
-r = get_redis()
+r = redis.Redis(host='db2.daocloudinternal.io', port=60222, db=0, password='KZ80pnCx')
 
 #Validating
 length = r.llen("TempProxy:host")

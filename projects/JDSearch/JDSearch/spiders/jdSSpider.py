@@ -4,7 +4,7 @@ import redis
 class JdSSpider(scrapy.Spider):
     name = 'jdSSpider'
     start_urls = ["https://search.jd.com/Search?keyword=iPhone&enc=utf-8&wq=iPhone"]
-    r = redis.Redis(host='192.168.199.218', port=6379, db=0)
+    r = redis.Redis(host='db2.daocloudinternal.io', port=60222, db=0, password='KZ80pnCx')
     #r.delete('jdSearchProduct:start_urls')
 
     def parse(self, response):

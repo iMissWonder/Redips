@@ -9,7 +9,7 @@ import redis
 class TaoBaoSearchSpider(scrapy.Spider):
     name = 'taobaoSSpider'
     start_urls=['https://s.taobao.com/search?q=iPhone&s=0']
-    r = redis.Redis(host='192.168.199.218', port=6379, db=0)
+    r = redis.Redis(host='db2.daocloudinternal.io', port=60222, db=0, password='KZ80pnCx')
     #r.delete('taobaoSearchProduct:start_urls')
 
     def parse(self, response):
@@ -36,5 +36,3 @@ class TaoBaoSearchSpider(scrapy.Spider):
             if tempLink[2] == "i":
                 tempLink = "https:" + tempLink
                 self.r.lpush('taobaoSearchProduct:start_urls',tempLink)
-
-

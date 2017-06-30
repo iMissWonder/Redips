@@ -11,7 +11,7 @@ from scrapy import signals
 CHANGE_PROXY_STATUS_LIST = [502, 404]
 
 class ProxyMiddleware(object):
-    r = redis.Redis(host='192.168.199.218',port = 6379, db = 0)
+    r = redis.Redis(host='db2.daocloudinternal.io',port = 60222, db = 0, password='KZ80pnCx')
     proxy_host =  r.rpoplpush("TempProxy:host","Proxy:host")
 
     def process_request(self, request, spider):
@@ -63,5 +63,5 @@ class ProxyMiddleware(object):
             if return_request:
                 return return_request
         return response
-    
+
     '''

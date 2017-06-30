@@ -15,7 +15,7 @@ class ProxySpider(scrapy.Spider):
         proxy_ip_list = selector.xpath('//td[2]/text()').extract()
         proxy_port_list = selector.xpath('//td[3]/text()').extract()
 
-        r = redis.Redis(host='192.168.199.218', port=6379, db=0)
+        r = redis.Redis(host='db2.daocloudinternal.io', port=60222, db=0, password='KZ80pnCx')
         r.delete('TempProxy:host')
         r.delete('Proxy:host')
         ip_test_url = 'http://ip.chinaz.com/getip.aspx'

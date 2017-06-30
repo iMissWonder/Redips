@@ -25,11 +25,12 @@ SCHEDULER_PERSIST = True
 SCHEDULER_QUEUE_CLASS = 'scrapy_redis.queue.SpiderPriorityQueue'
 
 REDIS_URL = None
-REDIS_HOST = '192.168.199.218'
-REDIS_PORT = 6379
+REDIS_HOST = 'db2.daocloudinternal.io'
+REDIS_PORT = 60222
+REDIS_PASSWORD = 'KZ80pnCx'
 
 # start MySQL database configure setting
-MYSQL_HOST = '192.168.199.218'
+MYSQL_HOST = 'db2.daocloudinternal.io'
 MYSQL_DBNAME = 'douban'
 MYSQL_USER = 'user'
 MYSQL_PASSWD = 'user'

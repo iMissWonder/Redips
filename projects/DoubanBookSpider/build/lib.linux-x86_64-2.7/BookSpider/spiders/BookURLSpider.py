@@ -8,7 +8,7 @@ from scrapy.selector import Selector
 class BookURLSpider(RedisSpider):
     name = 'BookURLSpider'
     redis_key = "BookURLSpider:start_urls"
-    r = redis.Redis(host='192.168.199.218', port=6379, db=0)
+    r = redis.Redis(host='db2.daocloudinternal.io', port=60222, db=0, password='KZ80pnCx')
     r.lpush('BookURLSpider:start_urls','https://book.douban.com/tag/%E5%B0%8F%E8%AF%B4')
 
     def parse(self, response):

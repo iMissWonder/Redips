@@ -13,11 +13,13 @@ BOT_NAME = 'bodyExtract'
 
 SPIDER_MODULES = ['bodyExtract.spiders']
 NEWSPIDER_MODULE = 'bodyExtract.spiders'
-REDIS_HOST = '192.168.199.218'
-REDIS_PORT = 6379
+REDIS_HOST = 'db2.daocloudinternal.io'
+REDIS_PORT = 60222
+REDIS_PASSWORD = 'KZ80pnCx'
 
 # start MySQL database configure setting
-MYSQL_HOST = '192.168.199.218'
+MYSQL_HOST = 'db2.daocloudinternal.io'
+MYSQL_PORT = 60072
 MYSQL_DBNAME = 'blog'
 MYSQL_USER = 'user'
 MYSQL_PASSWD = 'user'

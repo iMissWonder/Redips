@@ -27,9 +27,8 @@ class ProxyTestSpider(scrapy.Spider):
             print "***** Invalid IP *****"
 
     def del_proxy(self, current_proxy):
-        r = redis.Redis(host='192.168.199.218',port = 6379, db = 0)
+        r = redis.Redis(host='db2.daocloudinternal.io',port = 60222, db = 0, password='KZ80pnCx')
         print ('Remove proxy: %s, %d proxies left' % (
             current_proxy, r.llen("TempProxy:host")))
         #r.lrem("Proxy:host", 0, current_proxy)
         print "Successfully removed :" + current_proxy
-

@@ -13,13 +13,14 @@ BOT_NAME = 'JDSearch'
 
 SPIDER_MODULES = ['JDSearch.spiders']
 NEWSPIDER_MODULE = 'JDSearch.spiders'
-REDIS_HOST = '192.168.199.218'
-REDIS_PORT = 6379
+REDIS_HOST = 'db2.daocloudinternal.io'
+REDIS_PORT = 60222
+REDIS_PASSWORD = 'KZ80pnCx'
 
 TARGET = 'iPhone'
 
 # start MySQL database configure setting
-MYSQL_HOST = '192.168.199.218'
+MYSQL_HOST = 'db2.daocloudinternal.io'
 MYSQL_DBNAME = 'jdsearch'
 MYSQL_USER = 'user'
 MYSQL_PASSWD = 'user'

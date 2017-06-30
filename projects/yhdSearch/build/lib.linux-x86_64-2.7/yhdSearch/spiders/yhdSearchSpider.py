@@ -6,7 +6,7 @@ import redis
 class YhdSearchSpider(scrapy.Spider):
     name = 'yhdSSpider'
     start_urls=['http://search.yhd.com/c0-0-0/b/a-s1-v4-p3-price-d0-f0-m1-rt0-pid-mid0-kiphone']
-    r = redis.Redis(host='192.168.199.218', port=6379, db=0)
+    r = redis.Redis(host='db2.daocloudinternal.io', port=60222, db=0, password='KZ80pnCx')
     #r.delete('yhdSearchProduct:start_urls')
 
     def parse(self, response):

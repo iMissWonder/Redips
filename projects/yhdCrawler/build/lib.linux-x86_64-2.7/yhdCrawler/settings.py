@@ -14,11 +14,12 @@ BOT_NAME = 'yhdCrawler'
 SPIDER_MODULES = ['yhdCrawler.spiders']
 NEWSPIDER_MODULE = 'yhdCrawler.spiders'
 
-REDIS_HOST = '192.168.199.218'
-REDIS_PORT = 6379
+REDIS_HOST = 'db2.daocloudinternal.io'
+REDIS_PORT = 60222
+REDIS_PASSWORD = 'KZ80pnCx'
 
 # start MySQL database configure setting
-MYSQL_HOST = '192.168.199.218'
+MYSQL_HOST = 'db2.daocloudinternal.io'
 MYSQL_DBNAME = '1HDAll'
 MYSQL_USER = 'user'
 MYSQL_PASSWD = 'user'
