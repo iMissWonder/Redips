@@ -1,12 +1,12 @@
 ﻿# Redips分布式爬虫系统
-本项目的 **设计文档** 及 **需求文档** 位于项目文件的docs目录中。  
+本项目的 **设计文档** 及 **需求文档** 位于项目文件的docs目录中。
 
-↓↓↓↓↓↓↓↓↓↓↓↓**请观看演示视频**↓↓↓↓↓↓↓↓↓↓↓↓↓  
-[http://www.bilibili.com/video/av11721506/](http://www.bilibili.com/video/av11721506/)  
-↑↑↑↑↑↑↑↑↑↑↑↑**请观看演示视频**↑↑↑↑↑↑↑↑↑↑↑↑↑  
+↓↓↓↓↓↓↓↓↓↓↓↓**请观看演示视频**↓↓↓↓↓↓↓↓↓↓↓↓↓
+[http://www.bilibili.com/video/av11721506/](http://www.bilibili.com/video/av11721506/)
+↑↑↑↑↑↑↑↑↑↑↑↑**请观看演示视频**↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 ## 0.Redips介绍
-Redips是一个基于Scrapy框架实现的分布式爬虫系统。  
+Redips是一个基于Scrapy框架实现的分布式爬虫系统。
 
 - 项目名称"redips"是取自单词爬虫"spider"的反向拼写，意在强调我们的爬虫系统可以顺利解决反爬问题，同时也向实现分布式的核心组件：Redis内存数据库致敬。
 - Redips通过redis内存数据库器实现了分布式爬虫的优势，并且达成了优化算法、设计更全的逻辑，实现采集高效、优化内存、数据准确、用户操作便捷的目标，以满足广大电商数据需求者的需要。
@@ -15,7 +15,7 @@ Redips是一个基于Scrapy框架实现的分布式爬虫系统。
 
 ## 1.Docker封装的爬虫系统功能模块
 - Web端：[http://redipstest.t2.daoapp.io:61027/](http://redipstest.t2.daoapp.io:61027/)
-- 爬虫服务器端：[http://imisswonder-redips-scrapydtest.daoapp.io/](http://imisswonder-redips-scrapydtest.daoapp.io/)
+- 爬虫服务器端：[http://redips-scrapydtest.t2.daoapp.io:61140/](http://redips-scrapydtest.t2.daoapp.io:61140/)
 
 ## 2.简要操作说明
 1. 打开爬虫服务器端
@@ -72,41 +72,41 @@ sudo apt-get install php-mysql
 ```
 
 ## 5.文件结构
-Redips   
-│  deploy.sh                          # 部署用脚本文件  
-│  README.md  
-│    
-├─docs                                # **文档目录**  
-│      **设计文档.pdf**  
-│      **需求文档.pdf**  
-├─lib  
-│  └─scrapy_redis                     # **修改后的分布式组件**  
-│  
-├─projects                            # **爬虫项目目录**  
-│  ├─bodyExtract                      # 正文提取  
-│  ├─DoubanBookSpider                 # 豆瓣图书  
-│  ├─JDSearch                         # 京东搜索  
-│  ├─jingdongModel                    # 京东模板  
-│  ├─ProxyCrawler                     # 代理爬取器  
-│  ├─ProxyTester                      # 代理测试器  
-│  ├─taobaoCrawler                    # 淘宝全站  
-│  ├─taobaoSearch                     # 淘宝搜索  
-│  ├─yhdCrawler                       # 一号店全站  
-│  └─yhdSearch                        # 一号店搜索  
-│  
-└─web  
-    │  index.html                     # Web主页  
-    │  
-    ├─page                            # 页面  
-    │  │  1hdall.html                 # 一号店全网爬取页面  
-    │  │  1hdsearch.html              # 一号店搜索爬取页面  
-    │  │  boke.html                   # 正文提取页面  
-    │  │  douban.html                 # 豆瓣图书爬取页面  
-    │  │  jdmodel.html                # 京东模板爬取页面  
-    │  │  jdsearch.html               # 京东搜索爬取页面  
-    │  │  tball.html                  # 淘宝全网搜索页面  
-    │  │  tbsearch.html               # 淘宝搜索爬取页面  
-    │  │  
-    │  └─assets                       # css/js/image目录  
-    │  
-    └─php                             # php文件目录  
+Redips
+│  deploy.sh                          # 部署用脚本文件
+│  README.md
+│
+├─docs                                # **文档目录**
+│      **设计文档.pdf**
+│      **需求文档.pdf**
+├─lib
+│  └─scrapy_redis                     # **修改后的分布式组件**
+│
+├─projects                            # **爬虫项目目录**
+│  ├─bodyExtract                      # 正文提取
+│  ├─DoubanBookSpider                 # 豆瓣图书
+│  ├─JDSearch                         # 京东搜索
+│  ├─jingdongModel                    # 京东模板
+│  ├─ProxyCrawler                     # 代理爬取器
+│  ├─ProxyTester                      # 代理测试器
+│  ├─taobaoCrawler                    # 淘宝全站
+│  ├─taobaoSearch                     # 淘宝搜索
+│  ├─yhdCrawler                       # 一号店全站
+│  └─yhdSearch                        # 一号店搜索
+│
+└─web
+    │  index.html                     # Web主页
+    │
+    ├─page                            # 页面
+    │  │  1hdall.html                 # 一号店全网爬取页面
+    │  │  1hdsearch.html              # 一号店搜索爬取页面
+    │  │  boke.html                   # 正文提取页面
+    │  │  douban.html                 # 豆瓣图书爬取页面
+    │  │  jdmodel.html                # 京东模板爬取页面
+    │  │  jdsearch.html               # 京东搜索爬取页面
+    │  │  tball.html                  # 淘宝全网搜索页面
+    │  │  tbsearch.html               # 淘宝搜索爬取页面
+    │  │
+    │  └─assets                       # css/js/image目录
+    │
+    └─php                             # php文件目录

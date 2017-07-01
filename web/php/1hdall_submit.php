@@ -1,4 +1,5 @@
 ﻿<?php
+error_reporting(E_ERROR | E_PARSE); 
 $input01 = $_POST['input01'];
 setcookie('mycookie_input01',$input01);
 $input02 = $_POST['input02'];
@@ -11,4 +12,4 @@ echo "分别是：</br>";
 echo $input01."</br>";
 echo "   ".$input02."</br>";
 echo "   ".$input03;
-?> 
+?>
