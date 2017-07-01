@@ -1,5 +1,3 @@
-scrapyd
-
 cd ./mnt/projects/bodyExtract/
 scrapyd-deploy default -p bodyExtract
 
@@ -29,3 +27,5 @@ scrapyd-deploy default -p yhdCrawler
 
 cd ../yhdSearch
 scrapyd-deploy default -p yhdSearch
+
+scrapyd
