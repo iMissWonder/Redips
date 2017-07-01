@@ -15,7 +15,7 @@ Redips是一个基于Scrapy框架实现的分布式爬虫系统。
 
 ## 1.Docker封装的爬虫系统功能模块
 - Web端：[http://redipstest.t2.daoapp.io:61027/](http://redipstest.t2.daoapp.io:61027/)
-- 爬虫服务器端：[http://redips-scrapydtest.t2.daoapp.io:61140/](http://redips-scrapydtest.t2.daoapp.io:61140/)
+- 爬虫服务器端：[http://redips-scrapydtest.t2.daoapp.io:61031/](http://redips-scrapydtest.t2.daoapp.io:61031/)
 
 ## 2.简要操作说明
 1. 打开爬虫服务器端
