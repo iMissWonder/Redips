@@ -27,5 +27,3 @@ scrapyd-deploy default -p yhdCrawler
 
 cd ../yhdSearch
 scrapyd-deploy default -p yhdSearch
-
-scrapyd
