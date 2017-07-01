@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $input01 = $_POST['input01'];
 setcookie('mycookie_input01',$input01);
 $input02 = $_POST['input02'];
