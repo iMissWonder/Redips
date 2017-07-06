@@ -10,7 +10,12 @@
 <caption>来自Redips团队数据库：</caption>
 <tr><th>商品名</th><th>商品链接</th><th>店铺名</th><th>商品价格</th><th>淘宝优惠价格</th><th>累计评论数</th><th>交易成功数</th><th>
 <?php
-$conn=mysqli_connect('db2.daocloudinternal.io','user','user','tbsearch')or die("数据库连接失败");
+$sqlHost = $_COOKIE['mycookie_sqlHost'];
+$sqlUser = $_COOKIE['mycookie_sqlUser'];
+$sqlPwd = $_COOKIE['mycookie_sqlPwd'];
+$sqlPort = $_COOKIE['mycookie_sqlPort'];
+
+$conn=mysqli_connect($sqlHost,$sqlUser,$sqlPwd,'tbsearch',$sqlPort)or die("数据库连接失败");
 //连接数据库
 
 mysqli_select_db($conn, 'tbsearch') or die('选择数据库失败！');

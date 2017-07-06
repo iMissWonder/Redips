@@ -10,7 +10,12 @@
 <caption>来自Redips团队数据库：</caption>
 <tr><th>店铺名</th><th>店铺所在地</th><th>店铺综合评分</th><th>店铺综合评分-与同行平均水平</th><th>商品满意度</th><th>商品满意度-与同行平均水平</th><th>服务满意度</th><th>服务满意度-与同行平均水平</th><th>物流速度满意度</th><th>物流速度满意度-与同行平均水平</th><th>商品描述满意度</th><th>商品描述满意度-与同行平均水平</th><th>退换货处理满意度</th><th>退换货处理满意度-与同行平均水平</th><th>售后处理时长</th><th>售后处理时长-与同行平均水平</th><th>交易纠纷率</th><th>交易纠纷率-与同行平均水平</th><th>退换货返修率</th><th>退换货返修率-与同行平均水平</th><th>店铺违法违规信息次数</th><th>
 <?php
-$conn=mysqli_connect('db2.daocloudinternal.io','user','user','jdmodel')or die("数据库连接失败");
+$sqlHost = $_COOKIE['mycookie_sqlHost'];
+$sqlUser = $_COOKIE['mycookie_sqlUser'];
+$sqlPwd = $_COOKIE['mycookie_sqlPwd'];
+$sqlPort = $_COOKIE['mycookie_sqlPort'];
+
+$conn=mysqli_connect($sqlHost,$sqlUser,$sqlPwd,'jdmodel',$sqlPort)or die("数据库连接失败");
 //连接数据库
 
 mysqli_select_db($conn, 'jdmodel') or die('选择数据库失败！');

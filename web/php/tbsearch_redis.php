@@ -7,8 +7,9 @@ $rdsPort = $_COOKIE['mycookie_rdsPort'];
 $rdsPwd = $_COOKIE['mycookie_rdsPwd'];
 $scdHost = $_COOKIE['mycookie_scdHost'];
 $scdPort = $_COOKIE['mycookie_scdPort'];
-exec("curl http://".$scdHost.":".$scdPort."/schedule.json -d project=jingdongModel -d spider=jdmSpiderIn -d setting=MYSQL_HOST=".$sqlHost." -d setting=REDIS_HOST=".$rdsHost." -d setting=MYSQL_USER=".$sqlUser." -d setting=MYSQL_PASSWD=".$sqlPwd." -d setting=REDIS_PORT=".$rdsPort." -d setting=REDIS_PASSWORD=".$rdsPwd,$out);
-echo "你打开了爬虫！！！底下是返回值！！！</br>";
+$keyWd = $_COOKIE['mycookie_keyWd'];
+exec("curl http://".$scdHost.":".$scdPort."/schedule.json -d project=taobaoSearch -d spider=taobaoSSpider -d setting=MYSQL_HOST=".$sqlHost." -d setting=REDIS_HOST=".$rdsHost." -d setting=MYSQL_USER=".$sqlUser." -d setting=MYSQL_PASSWD=".$sqlPwd." -d setting=REDIS_PORT=".$rdsPort." -d setting=REDIS_PASSWORD=".$rdsPwd." -d setting=TARGET=".$keyWd,$out);
+echo "你打开了REDIS爬虫！！！底下是返回值！！！</br>";
 echo "---------------------------------------------------------</br>";
 $array = $out[0];
 echo $array."</br>";
@@ -16,5 +17,3 @@ $jobid = substr($array,27,32); //getjobid
 echo "你的jobid:".$jobid;
 setcookie('mycookie',$jobid);
 ?>
-
-

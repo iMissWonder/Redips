@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Redips-JDmodel</title>
+    <title>Redips-DouBan</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8" />
 
@@ -112,7 +112,7 @@
                 </a>
 
                 <ul class="dropdown-menu wider arrow nopadding messages">
-                  <li><h1>E-mail<strong> new message</strong></h1></li>
+                  <li><h1>E-mail<strong> 185066754@qq.com</strong></h1></li>
 
                 </ul>
 
@@ -189,12 +189,12 @@
                     </a>
                   </li>
 
-                  <li class="dropdown open active">
+                  <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                       <i class="fa fa-cny"></i> 京东 <b class="fa fa-plus dropdown-plus"></b>
                     </a>
                     <ul class="dropdown-menu">
-                      <li class="active">
+                      <li>
                         <a href="jdmodel.html">
                           <i class="fa fa-caret-right"></i> 模板爬取
                         </a>
@@ -245,7 +245,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li>
+                  <li class="active">
                     <a href="douban.html">
                       <i class="fa fa-eye"></i> 豆瓣
                     </a>
@@ -303,7 +303,7 @@
                   </li>
 
                   <li>
-                    <a href="widgets.html">
+                    <a href="http://www.bilibili.com/video/av11721506/">
                       <i class="fa fa-play-circle"></i> 演示视频
                     </a>
                   </li>
@@ -363,7 +363,7 @@
                 <li>You are here</li>
                 <li><a href="../index.html">Redips</a></li>
 
-                <li class="active">京东-模板爬取</li>
+                <li class="active">豆瓣</li>
               </ol>
             </div>
 
@@ -413,21 +413,48 @@
 
 
  	<p>
-    <td><strong>MySQL数据库IP地址：</strong></td>
-      &emsp;
-      <td align="center"><input type="text" name="input01" size="60" maxlength="60" value="db2.daocloudinternal.io"/></td>
+    <td><span style="display:inline-block;width:170px;"><strong>MySQL数据库HOST：</strong></span></td>
+      <td align="center"><input type="text" name="sqlHost" size="60" maxlength="60" value="db2.daocloudinternal.io"/></td>
+    </p>
+	
+	<p>
+    <td><span style="display:inline-block;width:170px;"><strong>MySQL数据库端口号：</strong></span></td>
+      <td align="center"><input type="text" name="sqlPort" size="60" maxlength="60" value="60072"/></td>
+    </p>
+	
+	<p>
+    <td><span style="display:inline-block;width:170px;"><strong>MySQL数据库用户名：</strong></span></td>
+      <td align="center"><input type="text" name="sqlUser" size="60" maxlength="60" value="root"/></td>
+    </p>
+	
+	<p>
+    <td><span style="display:inline-block;width:170px;"><strong>MySQL数据库密码：</strong></span></td>
+      <td align="center"><input type="text" name="sqlPwd" size="60" maxlength="60" value="NHNSIHfgKEw"/></td>
     </p>
 
      <p>
-      <td><strong>Redis数据库IP地址：</strong></td>
-      &emsp; &emsp;
-      <td align="center"><input type="text" name="input02" size="60" maxlength="60" value="db2.daocloudinternal.io"/></td>
+      <td><span style="display:inline-block;width:170px;"><strong>Redis数据库HOST：</strong></span></td>
+      <td align="center"><input type="text" name="rdsHost" size="60" maxlength="60" value="db2.daocloudinternal.io"/></td>
+    </p>
+	
+	<p>
+      <td><span style="display:inline-block;width:170px;"><strong>Redis数据库端口号：</strong></span></td>
+      <td align="center"><input type="text" name="rdsPort" size="60" maxlength="60" value="60222"/></td>
+    </p>
+	
+	<p>
+      <td><span style="display:inline-block;width:170px;"><strong>Redis数据库密码：</strong></span></td>
+      <td align="center"><input type="text" name="rdsPwd" size="60" maxlength="60" value="KZ80pnCx"/></td>
     </p>
 
 	<p>
-      <td><strong>scrapydIP地址：</strong></td>
-      &emsp; &emsp; &emsp;
-      <td align="center"><input type="text" name="input03" size="60" maxlength="60" value="scrapydtest.t2.daoapp.io"/></td>
+      <td><span style="display:inline-block;width:170px;"><strong>scrapyd HOST：</strong></span></td>
+      <td align="center"><input type="text" name="scdHost" size="60" maxlength="60" value="scrapydtest.t2.daoapp.io"/></td>
+    </p>
+	
+	<p>
+      <td><span style="display:inline-block;width:170px;"><strong>scrapyd 端口号：</strong></span></td>
+      <td align="center"><input type="text" name="scdPort" size="60" maxlength="60" value="61031"/></td>
     </p>
 
 
@@ -488,7 +515,7 @@
                   <!-- tile body -->
                   <div class="tile-body">
 
-                    <form class="form-horizontal" action="../php/douban_start.php" role="form">
+                    <form class="form-horizontal" action="../php/douban_redis.php" role="form">
 
 
                       <div class="form-group form-footer footer-white">
@@ -498,22 +525,28 @@
 
                          <div class="col-sm-offset-0 col-sm-8">
 &emsp;
-                          <button type="submit" class="btn btn-red">Start</button>
+                          <button type="submit" class="btn btn-orange">Redis</button>
 
                         </div>
                       </div>
 
                     </form>
 
-			<form action="../php/douban_stop.php">
+			<form action="../php/douban_start.php">
 			<div class="col-sm-offset-4 col-sm-8">
+&emsp;
+                          <button type="submit" class="btn btn-red">Start</button>
+			</div>
+                          </form>
+			<form action="douban_stopPrev.html">
+			<div class="col-sm-offset-5 col-sm-8">
 &emsp;
                           <button type="submit" class="btn btn-greensea">Stop</button>
 			</div>
                           </form>
 
 			<form action="../php/douban_check.php">
-			<div class="col-sm-offset-5 col-sm-8">
+			<div class="col-sm-offset-6 col-sm-8">
                           <button type="submit" class="btn btn-blue">Check</button>
 			</div>
                           </form>

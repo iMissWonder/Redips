@@ -10,7 +10,12 @@
 <caption>来自Redips团队数据库：</caption>
 <tr><th>图书ID号</th><th>名称</th><th>作者</th><th>ISBN号</th><th>出版社</th><th>出版时间</th><th>价格</th><th>页数</th><th>翻译</th><th>读者数</th><th>封面图片链接</th><th>
 <?php
-$conn=mysqli_connect('db2.daocloudinternal.io','user','user','douban')or die("数据库连接失败");
+$sqlHost = $_COOKIE['mycookie_sqlHost'];
+$sqlUser = $_COOKIE['mycookie_sqlUser'];
+$sqlPwd = $_COOKIE['mycookie_sqlPwd'];
+$sqlPort = $_COOKIE['mycookie_sqlPort'];
+
+$conn=mysqli_connect($sqlHost,$sqlUser,$sqlPwd,'douban',$sqlPort)or die("数据库连接失败");
 //连接数据库
 
 mysqli_select_db($conn, 'douban') or die('选择数据库失败！');
